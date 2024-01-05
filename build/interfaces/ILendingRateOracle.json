@@ -1,0 +1,282 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "asset",
+          "type": "address"
+        }
+      ],
+      "name": "getMarketBorrowRate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "asset",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "rate",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMarketBorrowRate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "interfaces/ILendingRateOracle.sol",
+    "exportedSymbols": {
+      "ILendingRateOracle": [
+        1071
+      ]
+    },
+    "id": 1072,
+    "license": "agpl-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1053,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "37:23:13"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 1054,
+          "nodeType": "StructuredDocumentation",
+          "src": "62:206:13",
+          "text": " @title ILendingRateOracle interface\n @notice Interface for the Meridian borrow rate oracle. Provides the average market borrow rate to be used as a base for the stable borrow rate calculations*"
+        },
+        "fullyImplemented": false,
+        "id": 1071,
+        "linearizedBaseContracts": [
+          1071
+        ],
+        "name": "ILendingRateOracle",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 1055,
+              "nodeType": "StructuredDocumentation",
+              "src": "303:58:13",
+              "text": "@dev returns the market borrow rate in ray*"
+            },
+            "functionSelector": "bb85c0bb",
+            "id": 1062,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMarketBorrowRate",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1058,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1057,
+                  "mutability": "mutable",
+                  "name": "asset",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1062,
+                  "src": "393:13:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1056,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "393:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "392:15:13"
+            },
+            "returnParameters": {
+              "id": 1061,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1060,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1062,
+                  "src": "431:7:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1059,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "431:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "430:9:13"
+            },
+            "scope": 1071,
+            "src": "364:76:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 1063,
+              "nodeType": "StructuredDocumentation",
+              "src": "444:75:13",
+              "text": "@dev sets the market borrow rate. Rate value must be in ray*"
+            },
+            "functionSelector": "72eb293d",
+            "id": 1070,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMarketBorrowRate",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1068,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1065,
+                  "mutability": "mutable",
+                  "name": "asset",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1070,
+                  "src": "551:13:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1064,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "551:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1067,
+                  "mutability": "mutable",
+                  "name": "rate",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1070,
+                  "src": "566:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1066,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "566:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "550:29:13"
+            },
+            "returnParameters": {
+              "id": 1069,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "588:0:13"
+            },
+            "scope": 1071,
+            "src": "522:67:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1072,
+        "src": "270:321:13"
+      }
+    ],
+    "src": "37:555:13"
+  },
+  "contractName": "ILendingRateOracle",
+  "dependencies": [],
+  "offset": [
+    270,
+    591
+  ],
+  "sha1": "842a84a99372fcd4844cdf035d0870d0657afb99",
+  "source": "// SPDX-License-Identifier: agpl-3.0\npragma solidity 0.6.12;\n\n/**\n * @title ILendingRateOracle interface\n * @notice Interface for the Meridian borrow rate oracle. Provides the average market borrow rate to be used as a base for the stable borrow rate calculations\n **/\n\ninterface ILendingRateOracle {\n  /**\n    @dev returns the market borrow rate in ray\n    **/\n  function getMarketBorrowRate(address asset) external view returns (uint256);\n\n  /**\n    @dev sets the market borrow rate. Rate value must be in ray\n    **/\n  function setMarketBorrowRate(address asset, uint256 rate) external;\n}\n",
+  "type": "interface"
+}

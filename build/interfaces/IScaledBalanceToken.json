@@ -1,0 +1,388 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "getScaledUserBalanceAndSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "scaledBalanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "scaledTotalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "interfaces/IScaledBalanceToken.sol",
+    "exportedSymbols": {
+      "IScaledBalanceToken": [
+        1499
+      ]
+    },
+    "id": 1500,
+    "license": "agpl-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1474,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "37:23:21"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 1499,
+        "linearizedBaseContracts": [
+          1499
+        ],
+        "name": "IScaledBalanceToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 1475,
+              "nodeType": "StructuredDocumentation",
+              "src": "96:296:21",
+              "text": " @dev Returns the scaled balance of the user. The scaled balance is the sum of all the\n updated stored balance divided by the reserve's liquidity index at the moment of the update\n @param user The user whose balance is calculated\n @return The scaled balance of the user*"
+            },
+            "functionSelector": "1da24f3e",
+            "id": 1482,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "scaledBalanceOf",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1478,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1477,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1482,
+                  "src": "420:12:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1476,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "420:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "419:14:21"
+            },
+            "returnParameters": {
+              "id": 1481,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1480,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1482,
+                  "src": "457:7:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1479,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "457:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "456:9:21"
+            },
+            "scope": 1499,
+            "src": "395:71:21",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 1483,
+              "nodeType": "StructuredDocumentation",
+              "src": "470:233:21",
+              "text": " @dev Returns the scaled balance of the user and the scaled total supply.\n @param user The address of the user\n @return The scaled balance of the user\n @return The scaled balance and the scaled total supply*"
+            },
+            "functionSelector": "0afbcdc9",
+            "id": 1492,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getScaledUserBalanceAndSupply",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1486,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1485,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1492,
+                  "src": "745:12:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1484,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "745:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "744:14:21"
+            },
+            "returnParameters": {
+              "id": 1491,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1488,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1492,
+                  "src": "782:7:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1487,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "782:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1490,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1492,
+                  "src": "791:7:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1489,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "791:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "781:18:21"
+            },
+            "scope": 1499,
+            "src": "706:94:21",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 1493,
+              "nodeType": "StructuredDocumentation",
+              "src": "804:144:21",
+              "text": " @dev Returns the scaled total supply of the variable debt token. Represents sum(debt/index)\n @return The scaled total supply*"
+            },
+            "functionSelector": "b1bf962d",
+            "id": 1498,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "scaledTotalSupply",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1494,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "977:2:21"
+            },
+            "returnParameters": {
+              "id": 1497,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1496,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1498,
+                  "src": "1003:7:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1495,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1003:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1002:9:21"
+            },
+            "scope": 1499,
+            "src": "951:61:21",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1500,
+        "src": "62:952:21"
+      }
+    ],
+    "src": "37:978:21"
+  },
+  "contractName": "IScaledBalanceToken",
+  "dependencies": [],
+  "offset": [
+    62,
+    1014
+  ],
+  "sha1": "4ac0fe17157f1dead63af45a6cd08d331fd310a9",
+  "source": "// SPDX-License-Identifier: agpl-3.0\npragma solidity 0.6.12;\n\ninterface IScaledBalanceToken {\n  /**\n   * @dev Returns the scaled balance of the user. The scaled balance is the sum of all the\n   * updated stored balance divided by the reserve's liquidity index at the moment of the update\n   * @param user The user whose balance is calculated\n   * @return The scaled balance of the user\n   **/\n  function scaledBalanceOf(address user) external view returns (uint256);\n\n  /**\n   * @dev Returns the scaled balance of the user and the scaled total supply.\n   * @param user The address of the user\n   * @return The scaled balance of the user\n   * @return The scaled balance and the scaled total supply\n   **/\n  function getScaledUserBalanceAndSupply(address user) external view returns (uint256, uint256);\n\n  /**\n   * @dev Returns the scaled total supply of the variable debt token. Represents sum(debt/index)\n   * @return The scaled total supply\n   **/\n  function scaledTotalSupply() external view returns (uint256);\n}\n",
+  "type": "interface"
+}

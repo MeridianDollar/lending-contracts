@@ -1,0 +1,172 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "asset",
+          "type": "address"
+        }
+      ],
+      "name": "getAssetPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "interfaces/IPriceOracleGetter.sol",
+    "exportedSymbols": {
+      "IPriceOracleGetter": [
+        1412
+      ]
+    },
+    "id": 1413,
+    "license": "agpl-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1402,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "37:23:19"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 1403,
+          "nodeType": "StructuredDocumentation",
+          "src": "62:99:19",
+          "text": " @title IPriceOracleGetter interface\n @notice Interface for the Meridian price oracle.*"
+        },
+        "fullyImplemented": false,
+        "id": 1412,
+        "linearizedBaseContracts": [
+          1412
+        ],
+        "name": "IPriceOracleGetter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 1404,
+              "nodeType": "StructuredDocumentation",
+              "src": "196:134:19",
+              "text": " @dev returns the asset price in ETH\n @param asset the address of the asset\n @return the ETH price of the asset*"
+            },
+            "functionSelector": "b3596f07",
+            "id": 1411,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAssetPrice",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1407,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1406,
+                  "mutability": "mutable",
+                  "name": "asset",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1411,
+                  "src": "356:13:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1405,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "356:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "355:15:19"
+            },
+            "returnParameters": {
+              "id": 1410,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1409,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1411,
+                  "src": "394:7:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1408,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "394:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "393:9:19"
+            },
+            "scope": 1412,
+            "src": "333:70:19",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1413,
+        "src": "163:242:19"
+      }
+    ],
+    "src": "37:369:19"
+  },
+  "contractName": "IPriceOracleGetter",
+  "dependencies": [],
+  "offset": [
+    163,
+    405
+  ],
+  "sha1": "4b831bc5299b6c44f2877bc2e3109cb5269dfe96",
+  "source": "// SPDX-License-Identifier: agpl-3.0\npragma solidity 0.6.12;\n\n/**\n * @title IPriceOracleGetter interface\n * @notice Interface for the Meridian price oracle.\n **/\n\ninterface IPriceOracleGetter {\n  /**\n   * @dev returns the asset price in ETH\n   * @param asset the address of the asset\n   * @return the ETH price of the asset\n   **/\n  function getAssetPrice(address asset) external view returns (uint256);\n}\n",
+  "type": "interface"
+}

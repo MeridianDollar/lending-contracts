@@ -1,0 +1,744 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "underlyingAsset",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "pool",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "treasury",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "incentivesController",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "oTokenDecimals",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "oTokenName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "oTokenSymbol",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "params",
+          "type": "bytes"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract ILendingPool",
+          "name": "pool",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "treasury",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "underlyingAsset",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IMeridianIncentivesController",
+          "name": "incentivesController",
+          "type": "address"
+        },
+        {
+          "internalType": "uint8",
+          "name": "oTokenDecimals",
+          "type": "uint8"
+        },
+        {
+          "internalType": "string",
+          "name": "oTokenName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "oTokenSymbol",
+          "type": "string"
+        },
+        {
+          "internalType": "bytes",
+          "name": "params",
+          "type": "bytes"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "interfaces/IInitializableOToken.sol",
+    "exportedSymbols": {
+      "IInitializableOToken": [
+        240
+      ]
+    },
+    "id": 241,
+    "license": "agpl-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 195,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "37:23:7"
+      },
+      {
+        "absolutePath": "interfaces/ILendingPool.sol",
+        "file": "./ILendingPool.sol",
+        "id": 197,
+        "nodeType": "ImportDirective",
+        "scope": 241,
+        "sourceUnit": 632,
+        "src": "62:48:7",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 196,
+              "name": "ILendingPool",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "70:12:7",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "interfaces/IMeridianIncentivesController.sol",
+        "file": "./IMeridianIncentivesController.sol",
+        "id": 199,
+        "nodeType": "ImportDirective",
+        "scope": 241,
+        "sourceUnit": 1239,
+        "src": "111:82:7",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 198,
+              "name": "IMeridianIncentivesController",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "119:29:7",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 200,
+          "nodeType": "StructuredDocumentation",
+          "src": "195:118:7",
+          "text": " @title IInitializableOToken\n @notice Interface for the initialize function on OToken\n @author Meridian*"
+        },
+        "fullyImplemented": false,
+        "id": 240,
+        "linearizedBaseContracts": [
+          240
+        ],
+        "name": "IInitializableOToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 201,
+              "nodeType": "StructuredDocumentation",
+              "src": "349:552:7",
+              "text": " @dev Emitted when an oToken is initialized\n @param underlyingAsset The address of the underlying asset\n @param pool The address of the associated lending pool\n @param treasury The address of the treasury\n @param incentivesController The address of the incentives controller for this oToken\n @param oTokenDecimals the decimals of the underlying\n @param oTokenName the name of the oToken\n @param oTokenSymbol the symbol of the oToken\n @param params A set of encoded parameters for additional initialization*"
+            },
+            "id": 219,
+            "name": "Initialized",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 218,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 203,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "underlyingAsset",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 219,
+                  "src": "927:31:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 202,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "927:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 205,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "pool",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 219,
+                  "src": "964:20:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 204,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "964:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 207,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "treasury",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 219,
+                  "src": "990:16:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 206,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "990:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 209,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "incentivesController",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 219,
+                  "src": "1012:28:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 208,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1012:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 211,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "oTokenDecimals",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 219,
+                  "src": "1046:20:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 210,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1046:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 213,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "oTokenName",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 219,
+                  "src": "1072:17:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 212,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1072:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 215,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "oTokenSymbol",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 219,
+                  "src": "1095:19:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 214,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1095:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 217,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "params",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 219,
+                  "src": "1120:12:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 216,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1120:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "921:215:7"
+            },
+            "src": "904:233:7"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 220,
+              "nodeType": "StructuredDocumentation",
+              "src": "1141:593:7",
+              "text": " @dev Initializes the oToken\n @param pool The address of the lending pool where this oToken will be used\n @param treasury The address of the Meridian treasury, receiving the fees on this oToken\n @param underlyingAsset The address of the underlying asset of this oToken (E.g. WETH for aWETH)\n @param incentivesController The smart contract managing potential incentives distribution\n @param oTokenDecimals The decimals of the oToken, same as the underlying asset's\n @param oTokenName The name of the oToken\n @param oTokenSymbol The symbol of the oToken"
+            },
+            "functionSelector": "183fb413",
+            "id": 239,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 237,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 222,
+                  "mutability": "mutable",
+                  "name": "pool",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 239,
+                  "src": "1762:17:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ILendingPool_$631",
+                    "typeString": "contract ILendingPool"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 221,
+                    "name": "ILendingPool",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 631,
+                    "src": "1762:12:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ILendingPool_$631",
+                      "typeString": "contract ILendingPool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 224,
+                  "mutability": "mutable",
+                  "name": "treasury",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 239,
+                  "src": "1785:16:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 223,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1785:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 226,
+                  "mutability": "mutable",
+                  "name": "underlyingAsset",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 239,
+                  "src": "1807:23:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 225,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1807:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 228,
+                  "mutability": "mutable",
+                  "name": "incentivesController",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 239,
+                  "src": "1836:50:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IMeridianIncentivesController_$1238",
+                    "typeString": "contract IMeridianIncentivesController"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 227,
+                    "name": "IMeridianIncentivesController",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1238,
+                    "src": "1836:29:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMeridianIncentivesController_$1238",
+                      "typeString": "contract IMeridianIncentivesController"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 230,
+                  "mutability": "mutable",
+                  "name": "oTokenDecimals",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 239,
+                  "src": "1892:20:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 229,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1892:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 232,
+                  "mutability": "mutable",
+                  "name": "oTokenName",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 239,
+                  "src": "1918:26:7",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 231,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1918:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 234,
+                  "mutability": "mutable",
+                  "name": "oTokenSymbol",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 239,
+                  "src": "1950:28:7",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 233,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1950:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 236,
+                  "mutability": "mutable",
+                  "name": "params",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 239,
+                  "src": "1984:21:7",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 235,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1984:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1756:253:7"
+            },
+            "returnParameters": {
+              "id": 238,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2018:0:7"
+            },
+            "scope": 240,
+            "src": "1737:282:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 241,
+        "src": "314:1707:7"
+      }
+    ],
+    "src": "37:1985:7"
+  },
+  "contractName": "IInitializableOToken",
+  "dependencies": [
+    "ILendingPool",
+    "ILendingPoolAddressesProvider",
+    "IMeridianIncentivesController"
+  ],
+  "offset": [
+    314,
+    2021
+  ],
+  "sha1": "07738d1a70f2a63ecea5106f7398302970a153c2",
+  "source": "// SPDX-License-Identifier: agpl-3.0\npragma solidity 0.6.12;\n\nimport {ILendingPool} from './ILendingPool.sol';\nimport {IMeridianIncentivesController} from './IMeridianIncentivesController.sol';\n\n/**\n * @title IInitializableOToken\n * @notice Interface for the initialize function on OToken\n * @author Meridian\n **/\ninterface IInitializableOToken {\n  /**\n   * @dev Emitted when an oToken is initialized\n   * @param underlyingAsset The address of the underlying asset\n   * @param pool The address of the associated lending pool\n   * @param treasury The address of the treasury\n   * @param incentivesController The address of the incentives controller for this oToken\n   * @param oTokenDecimals the decimals of the underlying\n   * @param oTokenName the name of the oToken\n   * @param oTokenSymbol the symbol of the oToken\n   * @param params A set of encoded parameters for additional initialization\n   **/\n  event Initialized(\n    address indexed underlyingAsset,\n    address indexed pool,\n    address treasury,\n    address incentivesController,\n    uint8 oTokenDecimals,\n    string oTokenName,\n    string oTokenSymbol,\n    bytes params\n  );\n\n  /**\n   * @dev Initializes the oToken\n   * @param pool The address of the lending pool where this oToken will be used\n   * @param treasury The address of the Meridian treasury, receiving the fees on this oToken\n   * @param underlyingAsset The address of the underlying asset of this oToken (E.g. WETH for aWETH)\n   * @param incentivesController The smart contract managing potential incentives distribution\n   * @param oTokenDecimals The decimals of the oToken, same as the underlying asset's\n   * @param oTokenName The name of the oToken\n   * @param oTokenSymbol The symbol of the oToken\n   */\n  function initialize(\n    ILendingPool pool,\n    address treasury,\n    address underlyingAsset,\n    IMeridianIncentivesController incentivesController,\n    uint8 oTokenDecimals,\n    string calldata oTokenName,\n    string calldata oTokenSymbol,\n    bytes calldata params\n  ) external;\n}\n",
+  "type": "interface"
+}

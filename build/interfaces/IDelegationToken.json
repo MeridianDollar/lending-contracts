@@ -1,0 +1,132 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "delegatee",
+          "type": "address"
+        }
+      ],
+      "name": "delegate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "interfaces/IDelegationToken.sol",
+    "exportedSymbols": {
+      "IDelegationToken": [
+        90
+      ]
+    },
+    "id": 91,
+    "license": "agpl-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 83,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "37:23:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 84,
+          "nodeType": "StructuredDocumentation",
+          "src": "62:134:3",
+          "text": " @title IDelegationToken\n @dev Implements an interface for tokens with delegation COMP/UNI compatible\n @author Meridian*"
+        },
+        "fullyImplemented": false,
+        "id": 90,
+        "linearizedBaseContracts": [
+          90
+        ],
+        "name": "IDelegationToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "5c19a95c",
+            "id": 89,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "delegate",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 87,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 86,
+                  "mutability": "mutable",
+                  "name": "delegatee",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 89,
+                  "src": "246:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 85,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "246:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "245:19:3"
+            },
+            "returnParameters": {
+              "id": 88,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "273:0:3"
+            },
+            "scope": 90,
+            "src": "228:46:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 91,
+        "src": "197:79:3"
+      }
+    ],
+    "src": "37:240:3"
+  },
+  "contractName": "IDelegationToken",
+  "dependencies": [],
+  "offset": [
+    197,
+    276
+  ],
+  "sha1": "aca39ae41be33fd5ed5b8748df2bfc2f2ec5e8d8",
+  "source": "// SPDX-License-Identifier: agpl-3.0\npragma solidity 0.6.12;\n\n/**\n * @title IDelegationToken\n * @dev Implements an interface for tokens with delegation COMP/UNI compatible\n * @author Meridian\n **/\ninterface IDelegationToken {\n  function delegate(address delegatee) external;\n}\n",
+  "type": "interface"
+}
